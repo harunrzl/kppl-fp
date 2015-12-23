@@ -1,0 +1,10 @@
+# Lrdc Framework
+RewriteEngine On
+RewriteRule . index.php [L]
+
+# Htaccess Protection
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+	order allow,deny
+	deny from all
+	satisfy all
+</Files>
