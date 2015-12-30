@@ -14,7 +14,7 @@
 	<link href="../assets/css/material.min.css" rel="stylesheet" />
 	<link href="../assets/js/material.min.js" rel="stylesheet" />
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<base href="/kppl/kppl/" />
+	<base href="<?= $_csc->dirpath() ?>" />
 </head>
 
 <body>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<base href="/kppl/kppl/" />
+	<base href="<?= $_csc->dirpath() ?>" />
 	
     <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">

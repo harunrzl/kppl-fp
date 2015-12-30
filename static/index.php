@@ -28,7 +28,7 @@ function pfx($t,$i) {
 
 
 // When the MAD begins..
-if ( ! file_exists( $files ) ) header( 'Location: /' );
+if ( ! file_exists( $files ) ) echo '404';
 
 elseif ( in_array( $_csc->format, array( 'png', 'jpg', 'jpeg', 'gif' ) ) ) {
 	header( 'Content-type: image/' . $_csc->format );
