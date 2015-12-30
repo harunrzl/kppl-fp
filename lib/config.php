@@ -22,11 +22,11 @@ date_default_timezone_set( 'Asia/Jakarta' );
  * then you need to set basepath to "lrdc-fw"
  * so you need to add: $_config['basepath'] = 'lrdc-fw';
  */
-//$_config['basepath'] = '';
+$_config['basepath'] = 'kppl/kppl';
 
 
 /* Database config*/
 $_db = new stdClass;
-$_db->name = 'kppl'; // YOUR DB name HERE
+$_db->name = 'psikolog'; // YOUR DB name HERE
 $_db->user = 'root'; // YOUR DB username HERE
 $_db->pass = ''; // YOUR DB password HERE

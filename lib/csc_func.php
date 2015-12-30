@@ -91,6 +91,7 @@ function redirect( $i=null ) {
 	global $_config;
 	$i = $i == '/' ?: ltrim( $i, '/' );
 	$r = $_config['basepath'] ? $_config['basepath'] . '/' : '';
-	$r = $i == null ?: '/' . $r . $i;
+	$r = '/' . $r . $i;
 	header( 'Location: ' . $r );
+	//echo  'Location: ' . $r ;
 }

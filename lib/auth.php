@@ -12,7 +12,10 @@
 /* Uncomment these line to enable auth
  * and modify it to suit your needs
  */
-if ( $_SESSION['user_id'] ) {
+if ( $_SESSION['login_client'] ) {
     $loggedin = true;
-    $me = $_SESSION['user_id'];
+    $me = $db->f( 'users', '*', 'WHERE id=?', $_SESSION['login_client'] );
+}
+else {
+	//$f = $db->f( 'client', '*', 'WHERE user_client=?', $_SESSION['login_username']);
 }

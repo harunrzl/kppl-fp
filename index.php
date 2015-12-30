@@ -28,7 +28,7 @@ $_csc->config = $_config;
 $_csc->theuri = $_SERVER['REQUEST_URI'];
 $_csc->port = $_SERVER['SERVER_PORT'];
 $_csc->get_uri();
-unset( $_config );
+//unset( $_config );
 
 
 /* Session doesn't count on non-browser */
@@ -38,13 +38,14 @@ if ( ! isset( $argc ) && ! $_csc->is_static ) session_start();
 if ( ! $_csc->is_static ) {
 	$_csc->redirect_to_slash();
 	require_once( 'lib/csc_pdo.php' );
-	require_once( 'lib/auth.php' );
 
 	if ( $_db ) {
 		$db = new csc_pdo( $_db->user, $_db->pass, $_db->name );
 		$db->pfx = '';
 		unset( $_db );
 	}
+
+	require_once( 'lib/auth.php' );
 }
 
 
