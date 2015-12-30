@@ -59,6 +59,9 @@ class csc_core {
 	}
 
 	public function dirpath() {
-		return '/' . trim( $this->config['basepath'], '/' ) . '/';
+		$r = trim( $this->config['basepath'], '/' );
+		$r = '/' . $r . '/';
+		$r = str_replace( '//', '/', $r );
+		return $r;
 	}
 }

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= $_div->title ?: 'Default Title' ?></title>
 <base href="<?= $_csc->dirpath() ?>">
-<link rel="stylesheet" href="<?= $_csc->dirpath() ?>assets/css/reset.css" type="text/css">
+<link rel="stylesheet" href="assets/css/reset.css" type="text/css">
 </head>
 
 <style>

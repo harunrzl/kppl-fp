@@ -89,9 +89,6 @@ function endexplode( $s, $i ) {
 /* Useful for relative url path */
 function redirect( $i=null ) {
 	global $_csc;
-	$i = $i == '/' ?: ltrim( $i, '/' );
-	$r = $_csc->config['basepath'] ? $_csc->config['basepath'] . '/' : '';
-	$r = '/' . $r . $i;
+	$r = $i == null ? '' : $_csc->dirpath() . ltrim( $i, '/' );
 	header( 'Location: ' . $r );
-	//echo  'Location: ' . $r ;
 }

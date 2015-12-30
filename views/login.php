@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<base href="<?= $_csc->dirpath() ?>" />
+	<base href="<?= $_csc->dirpath() ?>">
 	
     <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
@@ -33,9 +33,8 @@
 					<div class="uk-form-row">
 						<label for="selValue">Tipe Akun</label>
 						<select name="akunvalue" id="selValue">
-							<option value=""></option>
-							<option value="psikolog">Psikolog</option>
 							<option value="user_cl">User</option>
+							<option value="psikolog">Psikolog</option>
 						</select>
 					</div>
                     <div class="uk-form-row">
