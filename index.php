@@ -28,7 +28,7 @@ $_csc->config = $_config;
 $_csc->theuri = $_SERVER['REQUEST_URI'];
 $_csc->port = $_SERVER['SERVER_PORT'];
 $_csc->get_uri();
-//unset( $_config );
+unset( $_config );
 
 
 /* Session doesn't count on non-browser */
