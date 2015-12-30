@@ -15,7 +15,9 @@
 if ( $_SESSION['login_client'] ) {
     $loggedin = true;
     $me = $db->f( 'users', '*', 'WHERE id=?', $_SESSION['login_client'] );
-}
-else {
-	//$f = $db->f( 'client', '*', 'WHERE user_client=?', $_SESSION['login_username']);
+	if ( $me->session_value && $me->session_time < time() ) {
+		$db->u( 'users', 'SET session_value=0 WHERE id=?', $me->id );
+		unset( $loggedin, $me );
+		session_destroy();
+	}
 }

@@ -17,21 +17,24 @@
 			$_SESSION['login_username'] = $hasil['username'];
 			// Arahkan ke Halaman Admin
 			redirect("admin");
-		}
+		} 
+		
 
 		else if($value == "user_cl"){
 			$user = $user;
 			$pass = $pass;
-			$cek_session = mysql_query("SELECT * FROM users WHERE name = '$user' AND pass = '$pass'");
-			$result = mysql_fetch_array($cek_session);
-			// Simpan Session USER
-			$_SESSION['login_client'] = $result['id'];
+			$f = $db->f( 'users', '*', 'WHERE name = ? AND pass = ?', array( $user, $pass ) );
+			// Simpan Session USER //
+			if ( $f ) {
+				$_SESSION['login_client'] = $f->id;
+				$db->u( 'users', 'SET session_time=? WHERE id=?', array( time() + $f->session_value, $f->id ) );
 			// Arahkan ke Halaman User
-			redirect("chat");
+				redirect("chat");
+			} else echo "<script>alert('Maaf Username/Password Salah');</script>";echo "<script>window.location.href='login.html';</script>";
 		}
 		
 		else {
-			echo "<script>alert('Maaf Username/Password Anda Salah');</script>";
+			echo "<script>alert('Maaf Tipe Akun belum dipilih');</script>";
 			echo "<script>window.location.href='login.html';</script>";
 		}
 }
