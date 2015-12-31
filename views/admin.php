@@ -3,7 +3,7 @@
 	// Cek Login Apakah Sudah Login atau Belum
 	if (!isset($_SESSION['login_username'])){
 	// Jika Tidak Arahkan Kembali ke Halaman Login
-		header("location:/kppl/login.html");
+		redirect( 'login' );
 	} else {
 ?>
 <!DOCTYPE HTML>

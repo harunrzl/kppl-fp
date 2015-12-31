@@ -9,13 +9,13 @@
 			$f = $db->f( 'user_login', '*', 'WHERE username=? AND password=?', array( $user, sha1( $pass ) ) );
 			if ( $f ) {
 				// Simpan Session USER
-				$_SESSION['login_username'] = $r->username;
+				$_SESSION['login_username'] = $f->username;
 				// Arahkan ke Halaman Admin
 				redirect( 'admin' );
 
 			} else {
 				echo "<script>alert('Maaf Username/Password Salah');</script>";
-				echo "<script>window.location.href='login.html';</script>";
+				echo "<script>window.location.href='" . $_csc->dirpath() . "login';</script>";
 
 			}
 		
@@ -24,7 +24,7 @@
 			$f = $db->f( 'users', '*', 'WHERE name = ? AND pass = ?', array( $user, $pass ) );
 
 			// Simpan Session USER //
-			if ( $f ) {
+			if ( $f->session_value ) {
 				$_SESSION['login_client'] = $f->id;
 				$db->u( 'users', 'SET session_time=? WHERE id=?', array( time() + $f->session_value, $f->id ) );
 
@@ -33,14 +33,14 @@
 
 			} else {
 				echo "<script>alert('Maaf Username/Password Salah');</script>";
-				echo "<script>window.location.href='login.html';</script>";
+				echo "<script>window.location.href='" . $_csc->dirpath() . "login';</script>";
 
 			}
 
 		
 		} else {
 			echo "<script>alert('Maaf Tipe Akun belum dipilih');</script>";
-			echo "<script>window.location.href='login.html';</script>";
+				echo "<script>window.location.href='" . $_csc->dirpath() . "login';</script>";
 
 		}
 
