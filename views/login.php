@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/uikit.almost-flat.min.css" />
 	
     <!-- altair admin login page -->
-    <link rel="stylesheet" href="assets/css/login_page.min.css" />
+    <link rel="stylesheet" href="assets/css/login-page.min.css" />
 
 </head>
 <body class="login_page">
