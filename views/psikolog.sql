@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2015 at 09:38 AM
+-- Generation Time: Dec 31, 2015 at 02:02 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -58,26 +58,6 @@ INSERT INTO `chat` (`id`, `uid`, `epochtime`, `toid`, `isi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `client`
---
-
-CREATE TABLE IF NOT EXISTS `client` (
-  `time` int(11) NOT NULL,
-  `user_client` varchar(15) NOT NULL,
-  `pass_client` varchar(15) NOT NULL,
-  PRIMARY KEY (`user_client`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `client`
---
-
-INSERT INTO `client` (`time`, `user_client`, `pass_client`) VALUES
-(1451463431, 'ntlozSVu', '9Xcgda9i');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `front_news`
 --
 
@@ -107,21 +87,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `pass` varchar(255) NOT NULL,
-  `time` int(11) NOT NULL,
+  `session_time` int(11) NOT NULL,
+  `session_value` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `pass`, `time`) VALUES
-(1, 'Harun', 'kosongin aja', 0),
-(2, 'Faisal', 'kosongin aja', 0),
-(3, 'Bintang', 'kosongin aja', 0),
-(4, 'Basalamah', 'kosongin aja', 0),
-(5, 'Jundy', 'kosongin aja', 0),
-(6, 'HYoSnyly', 'XEM59uon', 1451469280);
+INSERT INTO `users` (`id`, `name`, `pass`, `session_time`, `session_value`) VALUES
+(1, 'Harun', 'kosongin aja', 0, 0),
+(2, 'Faisal', 'kosongin aja', 1451502354, 0),
+(3, 'Bintang', 'kosongin aja', 0, 0),
+(4, 'Basalamah', 'kosongin aja', 0, 0),
+(5, 'Jundy', 'kosongin aja', 0, 0);
 
 -- --------------------------------------------------------
 
