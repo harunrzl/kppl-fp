@@ -10,11 +10,11 @@
 <html lang="en">
 <head>
 	<title>Welcome</title>
-	<link href="../assets/css/admin.css" rel="stylesheet" />
-	<link href="../assets/css/material.min.css" rel="stylesheet" />
-	<link href="../assets/js/material.min.js" rel="stylesheet" />
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<base href="<?= $_csc->dirpath() ?>" />
+	<link href="assets/css/admin.css" rel="stylesheet" />
+	<link href="assets/css/material.min.css" rel="stylesheet" />
+	<link href="assets/js/material.min.js" rel="stylesheet" />
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
 </head>
 
 <body>
